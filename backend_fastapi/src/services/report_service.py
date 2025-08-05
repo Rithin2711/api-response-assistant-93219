@@ -206,7 +206,7 @@ class ReportService:
             # Write CSV file (with .xlsx extension for placeholder)
             with open(export_path, 'w', encoding='utf-8') as f:
                 f.write("\n".join(csv_content))
-                f.write(f"\n\n# Report Summary\n")
+                f.write("\n\n# Report Summary\n")
                 f.write(f"# Overall Score: {report.summary.overall_score:.2f}\n")
                 f.write(f"# Total Issues: {report.summary.total_issues}\n")
                 f.write("# Note: Full Excel export requires openpyxl library\n")
